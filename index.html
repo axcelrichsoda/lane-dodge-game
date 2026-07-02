@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>レーンよけゲーム</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="game-wrap">
+  <canvas id="game-canvas"></canvas>
+
+  <div id="hud">
+    <div id="score">SCORE: 0</div>
+    <div id="best">BEST: 0</div>
+  </div>
+
+  <div id="start-screen" class="overlay">
+    <h1>レーンよけゲーム</h1>
+    <p class="rule">奥から迫るドミノ板をよけよう。ぶつかったら終了。</p>
+    <div class="keys">
+      <div class="key-row"><span class="key">1</span> 押している間だけレーン2へ移動(離すとレーン1へ)</div>
+      <div class="key-row"><span class="key">2</span> 押している間だけレーン3へ移動(離すとレーン4へ)</div>
+    </div>
+    <button id="start-btn">スタート (Enter)</button>
+  </div>
+
+  <div id="gameover-screen" class="overlay hidden">
+    <h1>GAME OVER</h1>
+    <p id="final-score">SCORE: 0</p>
+    <p id="best-score">BEST: 0</p>
+    <button id="restart-btn">もう一度 (Enter)</button>
+  </div>
+</div>
+<script src="game.js"></script>
+</body>
+</html>
