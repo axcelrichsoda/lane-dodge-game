@@ -87,13 +87,60 @@ html, body {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 30px;
+  min-width: 30px;
   height: 30px;
+  padding: 0 6px;
   border-radius: 6px;
   background: #1f6fff;
   color: #fff;
   font-weight: 800;
   box-shadow: 0 2px 0 rgba(0,0,0,0.4);
+}
+
+.rebind-btn {
+  border: none;
+  font-size: 14px;
+  font-family: inherit;
+  cursor: pointer;
+  letter-spacing: 0;
+}
+
+.rebind-btn:hover {
+  background: #3f86ff;
+}
+
+.rebind-btn.listening {
+  background: #ff9f1c;
+  animation: pulse 0.8s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.55; }
+}
+
+.rebind-hint {
+  font-size: 12px;
+  opacity: 0.65;
+  max-width: 320px;
+}
+
+#combo {
+  color: #ffd25a;
+}
+
+#hit-flash {
+  position: absolute;
+  inset: 0;
+  background: #ff2b2b;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.28s ease-out;
+}
+
+#hit-flash.flash {
+  opacity: 0.4;
+  transition: opacity 0s;
 }
 
 button {

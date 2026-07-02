@@ -10,18 +10,29 @@
 <div id="game-wrap">
   <canvas id="game-canvas"></canvas>
 
+  <div id="hit-flash"></div>
+
   <div id="hud">
     <div id="score">SCORE: 0</div>
+    <div id="combo"></div>
+    <div id="hits">HIT: 0/3</div>
     <div id="best">BEST: 0</div>
   </div>
 
   <div id="start-screen" class="overlay">
     <h1>レーンよけゲーム</h1>
-    <p class="rule">奥から迫るドミノ板をよけよう。ぶつかったら終了。</p>
+    <p class="rule">奥から迫るドミノ板をよけよう。3回当たったら終了(スコア15点ごとに1回復)。</p>
     <div class="keys">
-      <div class="key-row"><span class="key">1</span> 押している間だけレーン2へ移動(離すとレーン1へ)</div>
-      <div class="key-row"><span class="key">2</span> 押している間だけレーン3へ移動(離すとレーン4へ)</div>
+      <div class="key-row">
+        <button class="key rebind-btn" data-group="0">C</button>
+        押している間だけレーン2へ移動(離すとレーン1へ)
+      </div>
+      <div class="key-row">
+        <button class="key rebind-btn" data-group="1">B</button>
+        押している間だけレーン3へ移動(離すとレーン4へ)
+      </div>
     </div>
+    <p class="rebind-hint">キーのボタンをクリックしてから押したいキーを入力すると変更できます</p>
     <button id="start-btn">スタート (Enter)</button>
   </div>
 
